@@ -1,10 +1,11 @@
 <script setup>
-
+import Navbar from "../components/Navbar.vue"
 </script>
 
 <template>
   <div class="body">
     <div class="container">
+    <Navbar />
     <img src="../assets/ivan-torres-MQUqbmszGGM-unsplash (4).jpg">
     <div class="center">
       <div class="grid">
