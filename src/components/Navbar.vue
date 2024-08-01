@@ -1,20 +1,21 @@
 <template>
     <nav>
-        <routerlink>HOME</routerlink>
-        <routerlink>MENU</routerlink>
-        <routerlink>ABOUT US</routerlink>
-        <routerlink>CONTACT</routerlink>
-        <routerlink>LOG IN</routerlink>
+        <RouterLink to="/">HOME</RouterLink>
+        <RouterLink to="/menu">MENU</RouterLink>
+        <RouterLink to="/aboutUs">ABOUT US</RouterLink>
+        <RouterLink to="/contactUs">CONTACT</RouterLink>
+        <RouterLink to="/login">LOG IN</RouterLink>
     </nav>
 </template>
 
 <style scoped>
-routerlink {
+a {
     color: antiquewhite;
     font-size: 1.5vw;
+    text-decoration: none;
 
 }
-routerlink:hover {
+a:hover {
     color: #989872;
     text-decoration: underline;
 }

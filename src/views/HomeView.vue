@@ -6,11 +6,11 @@ import Navbar from "../components/Navbar.vue"
   <div class="body">
     <div class="container">
     <Navbar />
-    <img src="../assets/ivan-torres-MQUqbmszGGM-unsplash (4).jpg">
+    <img src="../assets/pizzabackground.jpg">
     <div class="center">
       <div class="grid">
         <img class="logo" src="../assets/logo.png">
-        <h1>BLAZE PIZZA & GOURMET</h1>
+        <h1>BLAZE PIZZA</h1>
         <h3>Crafted with Passion, Fired to Perfection</h3>
       </div>
       <div class="grid2">
@@ -51,6 +51,7 @@ img {
   display: grid;
 }
 .center {
+  left: 50%;
   width: 50%;
   height: 80%;
   z-index: 2;
@@ -61,6 +62,8 @@ img {
   margin-top: 10%;
   background-image: linear-gradient(to right, #989872, rgba(255,0,0,0));
   position: relative;
+  animation: moveLeft 2s ease-in forwards;
+  animation-delay: 2s;
 }
 .grid {
   position:absolute;
@@ -72,7 +75,8 @@ img {
   grid-template-columns: 1fr 2fr ;
   grid-template-areas: 
     "logo header"
-    "logo tagline"   
+    "logo header"
+    "tagline tagline"   
 }
 .grid2 {
   position:absolute;
@@ -98,8 +102,9 @@ h1 {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
   grid-area: header;
-  align-self: flex-end;
-  font-size: 2vw;
+  align-self: center;
+  font-size: 4vw;
+  text-shadow: #661A1D 2px 0 10px;
 }
 button {
   background-color:#661A1D;
@@ -118,7 +123,7 @@ h3{
   grid-area: tagline;
   align-self: flex-start;
   text-wrap: nowrap;
-  font-size: 1vw;
+  font-size: 1.5vw;
 }
 p {
   color: antiquewhite;
@@ -127,6 +132,15 @@ p {
   text-align: center;
   grid-area: main;
   align-self: center;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 </style>
